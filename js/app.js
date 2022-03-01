@@ -39,7 +39,7 @@ function multiply(a, b) {
 let resultx = multiply(5, 9);
 console.log(resultx);
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5, 9);
+//testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -56,11 +56,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let equation = sum(a, b)[0];
+  let addingc = sum(equation, c)[0];
+  let equation2 = multiply(a, b)[0];
+  let addingCagain = multiply(equation2, c)[0];
+  let message1 = `${a} and ${b} and ${c} sum to ${addingc}.`;
+  let message2 = `The product of ${a} and ${b} and ${c} is ${addingCagain}.`;
+
+  return [addingc, addingCagain, message1, message2];
   //eslint-disable-line
 }
-
+let result2 = sumAndMultiply(4, 7, 5);
+console.log(result2);
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
