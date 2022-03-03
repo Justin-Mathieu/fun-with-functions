@@ -86,18 +86,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
-  let sum1 = sum(sum(sumArr));
-  let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum1} is their sum.`;
-  return [sum1, message];
+function sumArray() {
+  let sumOf = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+  let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumOf} is their sum.`;
+  return [sumOf, message];
   //eslint-disable-line
 }
-let result3 = sumArray(2, 3, 4);
+let result3 = sumArray(testArray);
 
 console.log(result3);
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
